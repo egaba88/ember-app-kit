@@ -1,0 +1,11 @@
+<div id="merchant">
+  {{#each}}
+    <div class="row">
+      <div><label>Date:</label>{{date}}</div>
+      <div><label>Comment:</label>{{blob}}</div>
+      {{#if email}}<div><label>E-mail:</label>{{email}}</div>{{/if}}
+      <div><label>Referrer:</label>{{referrer}}</div>
+      <div><label>User Agent:</label>{{agent}}</div>
+    </div>
+  {{/each}}
+</div>
