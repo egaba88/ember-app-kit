@@ -15,7 +15,7 @@ var ResultAdapter = DS.RESTAdapter.extend({
 
       hash.data = hash.data || {};
       hash.data.skip = hash.data.skip || 0;
-      hash.data.take = hash.data.take || 100000;
+      hash.data.take = hash.data.take || 100;
 
       hash.success = function(json) {
         json = adapter.formatJSON(json);
