@@ -1,7 +1,11 @@
 var IndexRoute = Ember.Route.extend({
   model: function() {
-    return ['red', 'yellow', 'blue'];
+    return merchants;
   }
 });
+
+var merchants = [
+  "m.wayfair.com"
+];
 
 export default IndexRoute;
