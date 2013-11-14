@@ -56,8 +56,10 @@ var ResultAdapter = DS.RESTAdapter.extend({
     var data = {};
     
     Ember.$.each(json, function(index, result) {
+      var date = new Date(result.date.replace(/(\d{1,2})(st|th|nd|rd)/g, "$1"));
+      
       result.id = index;
-      result.date = result.date.replace(/(\d{1,2})(th|nd|rd)/g, "$1");
+      result.date = date.toDateString();
     });
     
     data["result"] = json;

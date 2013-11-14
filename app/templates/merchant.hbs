@@ -1,11 +1,30 @@
 <div id="merchant">
-  {{#each}}
-    <div class="row">
-      <div><label>Date:</label>{{date}}</div>
-      <div><label>Comment:</label>{{blob}}</div>
-      {{#if email}}<div><label>E-mail:</label>{{email}}</div>{{/if}}
-      <div><label>Referrer:</label>{{referrer}}</div>
-      <div><label>User Agent:</label>{{agent}}</div>
+  {{link-to "<< Back to index" "index"}}
+  <section class="interactions">
+    <form>
+      <div class="filter">
+        <div>
+          <label for="startDate">From:</label><input placeholder="Start Date" id="startDate"/>
+        </div>
+        <div>
+          <label for="endDate">To:</label><input placeholder="End Date" id="endDate"/>
+        </div>
+      </div>
+      <button type="submit" {{action "applyFilter"}}>Apply</button>
+    </form>
+    <div>
+      <button {{action "download"}}>Download as CSV</button>
     </div>
+  </section>
+  {{#each review in reviews}}
+  <div class="review">
+    <div class="info">
+      <div><label>Date:</label>{{review.date}}</div>
+      <div><label>Comment:</label>{{review.blob}}</div>
+      {{#if review.email}}<div><label>E-mail:</label>{{review.email}}</div>{{/if}}
+      <div><label>Referrer:</label>{{review.referrer}}</div>
+      <div><label>User Agent:</label>{{review.agent}}</div>
+    </div>
+  </div>
   {{/each}}
 </div>

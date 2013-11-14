@@ -23,12 +23,11 @@ var IndexRoute = Ember.Route.extend(Ember.SimpleAuth.AuthenticatedRouteMixin, {
     }
   },
   model: function() {
-    return merchants;
+    return [
+      "m.wayfair.com",
+      "t.nomorerack.com"
+    ];
   }
 });
-
-var merchants = [
-  "m.wayfair.com"
-];
 
 export default IndexRoute;
