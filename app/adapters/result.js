@@ -1,7 +1,5 @@
 var ResultAdapter = DS.RESTAdapter.extend({
-  host: "http://localhost:3000",
-  
-  method: "GET",
+  host: "https://mopinion.herokuapp.com",
   
   headers: {
     "Authorization": "Basic am9leTptb3RoZXJmdWNraW5ncmFoaW1p"
@@ -12,10 +10,10 @@ var ResultAdapter = DS.RESTAdapter.extend({
     
     return new Ember.RSVP.Promise(function(resolve, reject) {
       hash = adapter.ajaxOptions(url, type, hash);
-
+      
       hash.data = hash.data || {};
       hash.data.skip = hash.data.skip || 0;
-      hash.data.take = hash.data.take || 100;
+      hash.data.take = hash.data.take || 100000;
 
       hash.success = function(json) {
         json = adapter.formatJSON(json);
