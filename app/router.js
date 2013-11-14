@@ -42,7 +42,10 @@ Ember.Location.registerImplementation('hashbang', Ember.HashLocation.extend({
 }));
 
 Router.map(function() {
+  this.route("confirm");
+  this.resource("login");
   this.resource("merchant", { path: "/:merchant" });
+  this.route("catch-all", { path: "*:" });
 });
 
 export default Router;

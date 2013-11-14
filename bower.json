@@ -6,7 +6,8 @@
     "qunit": "~1.12.0",
     "ember": "~>1.2.0-beta.1",
     "ember-data-shim": "1.0.0-beta.3",
-    "ember-resolver": "git://github.com/stefanpenner/ember-jj-abrams-resolver.git#master"
+    "ember-resolver": "git://github.com/stefanpenner/ember-jj-abrams-resolver.git#master",
+    "ember-simple-auth": "https://github.com/simplabs/ember-simple-auth-component.git"
   },
   "resolutions": {
     "ember": "~>1.2.0-beta.1"
